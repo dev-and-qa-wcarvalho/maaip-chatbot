@@ -1,0 +1,29 @@
+<h1>MAAIP, More Awareness About Impairment People</h1>
+<p>Este aplicativo tem como objetivo tornar as pessoas mais concientes no que diz respeito a realidade das pessoas com deficiência</p>
+<h2>Faça a sua pergunta</h2>
+<form method="POST" action="/">
+    <label for="question">Informe a sua dúvida</label>
+    <input type="text" id="question" name="question" placeholder="Digite a sua dúvida aqui"/>
+    <br/>
+    <br/>
+    <input type="submit" value="Enviar"/>
+</form>
+{% if response %}
+<ul>
+    <li>{{ response }}</li>
+</ul>
+{% endif %}
+<h2>Contribua dando novas dicas para o nosso aplicativo</h2>
+<form method="POST" action="/add">
+    <label for="intent">Informe a intenção da sua dica&nbsp;&nbsp;</label>
+    <input type="text" id="intent" name="intent"/>
+    <br/>
+    <label for="questionToTip">Informe a pergunta para a dica&nbsp;&nbsp;</label>
+    <input type="text" id="questionToTip" name="questionToTip"/>
+    <br/>
+    <label for="tip">Informe a dica&nbsp;&nbsp;</label>
+    <input type="text" id="tip" name="tip"/>
+    <br/>
+    <br/>
+    <input type="submit" value="Enviar"/>
+</form>
